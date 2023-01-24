@@ -1,0 +1,222 @@
+/* базовые стили */
+body {
+  margin: 0;
+  user-select: none;
+  font-family: "Arial";
+}
+
+h3 {
+  font-weight: bold;
+  font-size: calc(1.17em + .2vw);
+}
+
+h4 {
+  font-weight: bold;
+  font-size: calc(1em + .2vw);
+}
+
+/* Стили для боковой панели */
+/* Дополни их! */
+.sidebar {
+  background-color: #ededed;
+  text-decoration:darkred;
+  width: 300px;
+  padding: 20px;
+  transition: 0.25s;
+}
+
+.sidebar.hidden {
+  /* Как её скрыть? */
+  width: 0;
+  opacity: 0;
+  display: none;
+  transition: 1s;
+}
+
+.sidebar h3, .sidebar h4, .sidebar li, .sidebar div, .sidebar button {
+  opacity: 1;
+  transition: 1s;
+}
+
+.sidebar.hidden h3, .sidebar.hidden h4, .sidebar.hidden li, .sidebar.hidden div, .sidebar.hidden button {
+  opacity: 0;
+  transition: 0.25s;
+} 
+
+
+
+/* шапка */
+.header {
+  background-color: #EECB33;
+  padding: 15px 0;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 100px;
+  justify-content: space-between;
+}
+
+.logo-container,
+.search-container,
+.cart-container {
+  width: 30%;
+}
+
+.logo {
+  width: 80px;
+}
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #E22122;
+  font-size: 24px;
+  font-weight: 700;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 50px;
+}
+.search-input {
+  flex: 1;
+  padding: 10px;
+}
+.cart-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cart-button {
+  background-color: #ededed;
+  height: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-button img,
+.search-button img {
+  width: 40px;
+}
+
+.search-input,
+.search-button  {
+  border: none;
+}
+.search-button {
+  background-color: #ededed;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.search-input {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.cart-button {
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* товары */
+.main-container {
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.food-container {
+  flex: 1;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-total {
+  color: #E22122;
+}
+
+.order-button {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.card {
+  min-width: 200px;
+  max-width: 400px;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid grey;
+  overflow: hidden;
+}
+
+.card img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.food-title {
+  flex: 1;
+}
+
+.food-price {
+  background-color: RGBA(108, 117, 125, 1);
+  padding: 4px 8px;
+  border-radius: 20px;
+  color: white;
+  width: 50px;
+  text-align: center;
+}
+
+.card-active {
+  outline: 4px solid lightcoral;
+}
+
+.card-not-available {
+  color: #fff;
+  background-color: RGBA(108, 117, 125, 1);
+}
